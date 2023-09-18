@@ -1,28 +1,27 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var GRAVITY = 10
+const SPEED = 200.0
+var GRAVITY = 15
 var JUMP = 25
-
-
 @onready var _animated_sprite = $animation
-# Called when the node enters the scene tree for the first time.
-
-@export var speed = 200 
 var screen_size 
+var can_jump = true 
+var HEIGHT = 15
+
 
 func _ready():
 	screen_size = get_viewport_rect().size
 
 func _physics_process(delta):
 	velocity.y += GRAVITY
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_up") and can_jump:
 		_animated_sprite.play("jump")
-		velocity.y += -JUMP
+		velocity.y += -JUMP * HEIGHT
 	move_and_slide()
+	
+	if is_on_floor():
+		can_jump = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -42,6 +41,6 @@ func _process(delta):
 	else:
 		_animated_sprite.play("idle")
 
-	position += velocity * delta * speed
+	position += velocity * delta * SPEED
 	position.x =  clamp(position.x, 0, screen_size.x)
 	position.y =  clamp(position.y, 0, screen_size.y)

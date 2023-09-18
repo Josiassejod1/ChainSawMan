@@ -340,5 +340,5 @@ frame_progress = 0.478975
 script = SubResource("GDScript_xs5p6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 4)
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_j4pdj")
