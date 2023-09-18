@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
-
 const SPEED = 200.0
 var GRAVITY = 15
 var JUMP = 25
-@onready var _animated_sprite = $animation
-var screen_size 
-var can_jump = true 
 var HEIGHT = 15
+
+var screen_size 
+@onready var _animated_sprite = $animation
 
 
 func _ready():
@@ -16,11 +15,11 @@ func _ready():
 func _physics_process(delta):
 	velocity.y += GRAVITY
 	
-	
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
 			_animated_sprite.play("jump")
 			velocity.y += -JUMP * HEIGHT
+	
 	move_and_slide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
