@@ -336,7 +336,7 @@ script = ExtResource("1_q1uy4")
 [node name="animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5vr2s")
 animation = &"idle"
-frame_progress = 0.436492
+frame_progress = 0.430449
 script = SubResource("GDScript_xs5p6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
