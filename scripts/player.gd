@@ -15,13 +15,13 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += GRAVITY
-	if Input.is_action_just_pressed("ui_up") and can_jump:
-		_animated_sprite.play("jump")
-		velocity.y += -JUMP * HEIGHT
-	move_and_slide()
+	
 	
 	if is_on_floor():
-		can_jump = true
+		if Input.is_action_just_pressed("ui_up"):
+			_animated_sprite.play("jump")
+			velocity.y += -JUMP * HEIGHT
+	move_and_slide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
