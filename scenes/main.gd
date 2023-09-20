@@ -14,6 +14,7 @@ func update_health_ui():
 	set_health_bar()
 	
 func _input(event):
+	# TODO: remove after demo
 	if event.is_action_pressed("ui_accept"):
 		damage()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
