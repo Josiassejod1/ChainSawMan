@@ -19,6 +19,7 @@ func damage():
 	if health < 0:
 		health = MAX_HEALTH
 	set_health_bar()
+	set_health_label()
 		
 func set_health_bar():
 	$HealthBarProgress.value = health

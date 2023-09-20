@@ -25,11 +25,19 @@ position = Vector2(499.5, 664)
 shape = SubResource("RectangleShape2D_o47xe")
 
 [node name="HealthBarLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 847.0
+offset_top = 4.0
+offset_right = 887.0
+offset_bottom = 27.0
 
 [node name="HealthBarProgress" type="ProgressBar" parent="."]
-offset_right = 4.0
-offset_bottom = 27.0
+anchors_preset = -1
+anchor_left = 0.866
+anchor_right = 0.866
+offset_left = -106.0
+offset_top = 31.0
+offset_right = 106.0
+offset_bottom = 60.0
 max_value = 5.0
 step = 1.0
+show_percentage = false
