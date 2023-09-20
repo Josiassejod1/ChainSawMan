@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgaxo6mv3dg7b"]
+[gd_scene load_steps=6 format=3 uid="uid://cgaxo6mv3dg7b"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_aj7i5"]
 [ext_resource type="PackedScene" uid="uid://c0ok2qiubykho" path="res://scenes/player.tscn" id="2_i77ks"]
+[ext_resource type="Theme" uid="uid://ccf1kaxffimdj" path="res://health_bar.tres" id="3_gwd16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o47xe"]
 size = Vector2(1001, 66)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiq41"]
+bg_color = Color(0, 0.580392, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Main" type="Node"]
 script = ExtResource("1_aj7i5")
@@ -38,6 +46,8 @@ offset_left = -106.0
 offset_top = 31.0
 offset_right = 106.0
 offset_bottom = 60.0
+theme = ExtResource("3_gwd16")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eiq41")
 max_value = 5.0
 step = 1.0
 show_percentage = false
