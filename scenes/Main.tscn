@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgaxo6mv3dg7b"]
+[gd_scene load_steps=8 format=3 uid="uid://cgaxo6mv3dg7b"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_aj7i5"]
+[ext_resource type="Texture2D" uid="uid://cjc6qlp2gm6ni" path="res://assets/hotel2.png" id="2_2xxcg"]
 [ext_resource type="PackedScene" uid="uid://c0ok2qiubykho" path="res://scenes/player.tscn" id="2_i77ks"]
 [ext_resource type="Theme" uid="uid://ccf1kaxffimdj" path="res://health_bar.tres" id="3_gwd16"]
 [ext_resource type="Texture2D" uid="uid://uuhspjkiwb7t" path="res://assets/head.png" id="4_k4y7s"]
@@ -23,6 +24,11 @@ custom_minimum_size = Vector2(1000, 700)
 offset_right = 1000.0
 offset_bottom = 700.0
 color = Color(0.560784, 0.4, 0.121569, 1)
+
+[node name="Hotel2" type="Sprite2D" parent="."]
+position = Vector2(509.875, 350)
+scale = Vector2(0.785319, 0.826172)
+texture = ExtResource("2_2xxcg")
 
 [node name="Player" parent="." instance=ExtResource("2_i77ks")]
 position = Vector2(480, 536)
